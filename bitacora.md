@@ -22,3 +22,14 @@ Proceso completo desde que el cliente llega hasta que sale con bicicleta, casco 
 8. Cobrar el dinero y entregar el recibo con el detalle.
 9. Entregar la bicicleta, el casco y el candado, verificando el estado de la bici junto con el cliente.
 10. Registrar todo en el cuaderno y el cliente sale del local con su equipo completo.
+
+
+Prueba con compañero
+Intercambiamos pasos y al seguirlos literalmente encontramos estas ambigüedades:
+- No validaba documento
+- No validaba si había stock de bicis
+- No verificaba pago
+- No especificaba talla de casco
+
+Algoritmo corregido 
+Se corrigió agregando decisiones SI/ENTONCES/SINO y asegurando que siempre llega a FIN.
