@@ -23,7 +23,7 @@ ALGORITMO Kilometro 0 - Rueda Libre - Taquilla de Alquiler
 ALGORITMO Rueda Libre - VERSION 2 CORREGIDA
 
 1.Se le pide al cliente su documento de identidad.
-2.Si el cliente no tiene documento, se le informa que es un requisito obligatorio para el préstamo y el proceso termina ahí.Si sí tiene, se continúa.
+2.Si el cliente no tiene documento, se le informa que es un requisito obligatorio para el préstamo y el proceso termina ahí. Si, sí tiene, se continúa.
 3.Se le pregunta qué tipo de bicicleta desea: Urbana, Montaña o Eléctrica.
 4.DECISIÓN: Se verifica si hay disponibilidad de ese tipo de bicicleta. Si no hay disponible, se le ofrece otro tipo de bicicleta o se termina el proceso. Si sí hay, se continúa.
 5.Se le pregunta por cuánto tiempo la necesita: 1 hora, medio día que son 4 horas, o día completo.
@@ -33,5 +33,40 @@ ALGORITMO Rueda Libre - VERSION 2 CORREGIDA
 9.Si el cliente no tiene el dinero suficiente, se le informa que proceso termina.
 10.Si tiene el dinero, se cobra, se le entrega el recibo detallado y se le entrega la bicicleta, el casco verificando su talla y el candado, verificando el estado de la bici con el cliente.
 Se registra todo en el cuaderno: documento, tipo de bicicleta, duración, recorrido y total.
+
+Características del algoritmo
+Mi algoritmo Kilómetro 0 cumple con las 5 características así:
+1. Precisión: Cada instrucción es clara y no se presta para dudas. Ejemplo: No digo "cobra barato", digo exactamente "Urbana $10.000 1h, $30.000 medio día, $50.000 día completo" y "Calcular TOTAL = Tarifa Cuadro 1 + Tarifa Cuadro 2"
+2. Finitud: Mi algoritmo tiene un inicio y un fin definido y siempre termina. Ejemplo: Tiene 13 pasos y en los pasos 2, 4 y 9 si algo falla (sin documento, sin bici, sin plata) dice "TERMINAR", entonces nunca se queda en un bucle infinito.
+3.  Orden: Los pasos tienen un orden lógico que no se puede saltar. Ejemplo: No puedo calcular el total sin antes haber preguntado el tipo de bici  y consultado los cuadros.
+4. Determinismo: Si hago lo mismo con las mismas condiciones, da el mismo resultado. Ejemplo: Si dos clientes piden "Urbana + 1 hora + Ningún recorrido", a los dos les da $10.000 + $0 = $10.000, no cambia.
+5. Efectividad: El algoritmo resuelve el problema real y se puede hacer. Ejemplo: Al final el cliente sí sale con bici, casco y candado, y yo sí puedo registrar todo en el cuaderno, no es algo imposible.
+
+
+
+Los 4 pilares del pensamiento computacional aplicados a mi proceso de Kilómetro 0:
+1. Descomposición :
+Descompuse el problema grande "atender un alquiler" en partes pequeñas y manejables: 1) Pedir documento, 2) Elegir tipo de bici, 3) Elegir duración, 4) Consultar tarifas Cuadro 1, 5) Elegir recorrido Cuadro 2, 6) Calcular, cobrar y entregar equipo.
+2. Reconocimiento de Patrones :
+El patrón que se repite siempre con cada cliente es el mismo flujo: Saludo -> Documento -> Tipo de bici -> Duración -> Recorrido -> Total = Cuadro 1 + Cuadro 2 -> Cobro -> Entrega de bici, casco y candado -> Registro.
+3. Abstracción :
+Dejé por fuera detalles que no afectan el algoritmo principal para no complicarlo, como: el color de la bicicleta, la marca del casco, si el cliente viene con amigos, si está lloviendo, o qué ropa trae puesta. Solo me enfoqué en documento, tipo, duración, recorrido y total.
+4. Algoritmo :
+Mi algoritmo final es la Versión 2 corregida. Es el que tiene la DECISIÓN de verificar si hay bici disponible y las validaciones de documento y pago, y que garantiza que siempre llega a FIN.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 El cliente sale con su bicicleta, casco y candado.
 
